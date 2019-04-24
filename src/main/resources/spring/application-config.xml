@@ -24,4 +24,7 @@
 		<property name="dataSource" ref="ds"/>
 		<property name="mapperLocations" value="classpath:/mapper/*-sql.xml"></property>
 	</bean>
+	<bean id="ss" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="ssFactory"/>
+	</bean>
 </beans>
