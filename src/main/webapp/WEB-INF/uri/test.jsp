@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>고양이^_^</title>
 </head>
 <body>
-${addrList}
-<a href="uri/test">테스트 가기</a>
+고양이^_^
 </body>
 </html>

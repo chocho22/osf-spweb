@@ -17,8 +17,8 @@
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
 		<property name="username" value="osfu"/>
 		<property name="password" value="12345678"/>
-		<property name="maxActive" value="10"/>
-		<property name="minIdle" value="5"/>
+		<!-- <property name="maxActive" value="10"/>
+		<property name="minIdle" value="5"/> -->
 	</bean>
 	<bean id="ssFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds"/>
