@@ -10,14 +10,14 @@
 가입하세요^_^
 
 ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciPwd">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
-ID : <type input="text" name="ciId">
+PASSWORD : <type input="text" name="ciPwd">
+이름 : <type input="text" name="ciName">
+나이 : <type input="text" name="ciAge">
+E-mail : <type input="text" name="ciEmail">
+코드? : <type input="text" name="ciZip">
+주소 : <type input="text" name="ciAddr1">
+상세주소 : <type input="text" name="ciAddr2">
+전화번호 : <type input="text" name="ciPhone">
 
 </body>
 </html>

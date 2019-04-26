@@ -3,11 +3,18 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="customer">
-	<select id="selectCustomerList" resultType="map">
+<resultMap type="com.osf.web.vo.CustomerVO" id="ci">
+	<id property="ciNum" column="ci_num"/>
+	<result property="ciName" column="ci_name"/>
+</resultMap>
+	<select id="selectCustomerList" resultMap="ci">
 		select * from customer_info
 	</select>
 	<select id="selectCustomer" resultType="map">
-		select * from customer_info
+		select * from customer_info where ci_num=#{ciNum}
+	</select>
+	<select id="selectCustomerByCiId" resultType="map">
+		select * from customer_info where ci_id=#{ciId}
 	</select>
 	<insert id="insertCustomer">
 		insert into customer_info(
@@ -53,5 +60,35 @@
 			#{ciPhone}
 		</if>
 		)
+	</insert>
+	<insert id="updateCustomer">
+		update customer_info
+		<set>
+		<if test="ciPwd!=null">
+			ci_pwd = #{ciPwd},
+		</if>
+		<if test="ciName!=null">
+			ci_name = #{ciName},
+		</if>
+		<if test="ciAge!=null">
+			ci_age = #{ciAge},
+		</if>
+		<if test="ciEmail!=null">
+			ci_email = #{ciEmail},
+		</if>
+		<if test="ciZip!=null">
+			ci_zip = #{ciZip},
+		</if>
+		<if test="ciAddr1!=null">
+			ci_addr1 = #{ciAddr1},
+		</if>
+		<if test="ciAddr2!=null">
+			ci_addr2 = #{ciAddr2},
+		</if>
+		<if test="ciPhone!=null">
+			ci_phone = #{ciPhone},
+		</if>
+		</set>
+		where ci_num = #{ciNum}
 	</insert>
 </mapper>
