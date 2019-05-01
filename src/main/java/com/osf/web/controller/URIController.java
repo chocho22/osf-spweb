@@ -12,5 +12,4 @@ public class URIController {
 	public String goPage(HttpServletRequest req) {
 		return req.getRequestURI();
 	}
-	
 }
