@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,5 +44,11 @@ public class EMPController {
 		list.add("3");
 		list.add("4");
 		return list;
+	}
+	
+	@RequestMapping(value="/emp/insert",method=RequestMethod.GET)
+	public String goInsert(Model m) {
+		m.addAttribute("deptList",es.selectDeptList());
+		return "/uri/emp/insert";
 	}
 }

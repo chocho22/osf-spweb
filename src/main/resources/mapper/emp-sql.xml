@@ -14,4 +14,12 @@
 	 		</if>
 	 	</where>
 	</select>
+	<select id="selectEmpList2" resultType="com.osf.web.vo.EmpVO">
+	 	select * from emp
+	 	<where>
+	 		<if test="lvl!=null">
+	 			and lvl=#{lvl}
+	 		</if>
+	 	</where>
+	</select>
 </mapper>
